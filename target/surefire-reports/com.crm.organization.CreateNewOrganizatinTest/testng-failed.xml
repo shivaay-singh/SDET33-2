@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [com.crm.organization.CreateNewOrganizatinTest]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="com.crm.organization.CreateNewOrganizatinTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="loginToApplication"/>
+          <include name="logoutFromApplication"/>
+          <include name="closeDBconnection"/>
+          <include name="createNewOrganizatinTest"/>
+          <include name="openDataBase"/>
+        </methods>
+      </class> <!-- com.crm.organization.CreateNewOrganizatinTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.crm.organization.CreateNewOrganizatinTest] -->

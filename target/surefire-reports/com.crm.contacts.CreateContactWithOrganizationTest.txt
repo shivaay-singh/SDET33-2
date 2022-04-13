@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.crm.contacts.CreateContactWithOrganizationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 41.872 sec <<< FAILURE!
+createContactWithOrganizationTest(com.crm.contacts.CreateContactWithOrganizationTest)  Time elapsed: 23.887 sec  <<< FAILURE!
+java.lang.AssertionError: Error Organization not created expected [Sdet13209] but found [Sdet13]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at com.crm.contacts.CreateContactWithOrganizationTest.createContactWithOrganizationTest(CreateContactWithOrganizationTest.java:86)
+

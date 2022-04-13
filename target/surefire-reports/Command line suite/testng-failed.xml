@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="com.crm.practice.PracticeCreatingNewOrganizationTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="loginToApplication"/>
+          <include name="logoutFromApplication"/>
+          <include name="closeDBconnection"/>
+          <include name="practicecreateNewOrganizatinTest"/>
+          <include name="openDataBase"/>
+        </methods>
+      </class> <!-- com.crm.practice.PracticeCreatingNewOrganizationTest -->
+      <class name="com.crm.organization.CreateNewOrganizatinTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="loginToApplication"/>
+          <include name="logoutFromApplication"/>
+          <include name="closeDBconnection"/>
+          <include name="createNewOrganizatinTest"/>
+          <include name="openDataBase"/>
+        </methods>
+      </class> <!-- com.crm.organization.CreateNewOrganizatinTest -->
+      <class name="com.crm.practice.PracticeCreateContactWithOrganizationTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="loginToApplication"/>
+          <include name="logoutFromApplication"/>
+          <include name="practiceCreateContactWithOrganizationTest"/>
+          <include name="closeDBconnection"/>
+          <include name="openDataBase"/>
+        </methods>
+      </class> <!-- com.crm.practice.PracticeCreateContactWithOrganizationTest -->
+      <class name="com.crm.contacts.CreateContactWithOrganizationTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="createContactWithOrganizationTest"/>
+          <include name="loginToApplication"/>
+          <include name="logoutFromApplication"/>
+          <include name="closeDBconnection"/>
+          <include name="openDataBase"/>
+        </methods>
+      </class> <!-- com.crm.contacts.CreateContactWithOrganizationTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

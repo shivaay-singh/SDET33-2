@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Organization created successfully]]>
+    </line>
+  </reporter-output>
+  <suite name="com.crm.organization.CreateNewOrganizatinTest" duration-ms="29469" started-at="2022-04-12T12:06:06Z" finished-at="2022-04-12T12:06:35Z">
+    <groups>
+      <group name="regression">
+        <method signature="CreateNewOrganizatinTest.createNewOrganizatinTest()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="createNewOrganizatinTest" class="com.crm.organization.CreateNewOrganizatinTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="CreateNewOrganizatinTest.createNewOrganizatinTest()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="createNewOrganizatinTest" class="com.crm.organization.CreateNewOrganizatinTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Command line test" duration-ms="29469" started-at="2022-04-12T12:06:06Z" finished-at="2022-04-12T12:06:35Z">
+      <class name="com.crm.organization.CreateNewOrganizatinTest">
+        <test-method status="PASS" signature="openDataBase()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="openDataBase" is-config="true" duration-ms="2348" started-at="2022-04-12T12:06:03Z" finished-at="2022-04-12T12:06:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDataBase -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="launchBrowser" is-config="true" duration-ms="5127" started-at="2022-04-12T12:06:06Z" finished-at="2022-04-12T12:06:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginToApplication()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="loginToApplication" is-config="true" duration-ms="4440" started-at="2022-04-12T12:06:11Z" finished-at="2022-04-12T12:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method status="PASS" signature="createNewOrganizatinTest()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="createNewOrganizatinTest" duration-ms="16890" started-at="2022-04-12T12:06:15Z" finished-at="2022-04-12T12:06:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Organization created successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createNewOrganizatinTest -->
+        <test-method status="PASS" signature="logoutFromApplication()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="logoutFromApplication" is-config="true" duration-ms="2194" started-at="2022-04-12T12:06:32Z" finished-at="2022-04-12T12:06:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApplication -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="closeBrowser" is-config="true" duration-ms="782" started-at="2022-04-12T12:06:34Z" finished-at="2022-04-12T12:06:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="closeDBconnection()[pri:0, instance:com.crm.organization.CreateNewOrganizatinTest@6df97b55]" name="closeDBconnection" is-config="true" duration-ms="14" started-at="2022-04-12T12:06:35Z" finished-at="2022-04-12T12:06:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDBconnection -->
+      </class> <!-- com.crm.organization.CreateNewOrganizatinTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.crm.organization.CreateNewOrganizatinTest -->
+</testng-results>

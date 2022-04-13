@@ -1,0 +1,967 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>37/0/4</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 12 13:14:01 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (306 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.crm.contacts.CreateContactWithOrganizationTest.launchBrowser()'><b>launchBrowser</b><br>Test class: com.crm.contacts.CreateContactWithOrganizationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace51152513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace51152513'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.contacts.CreateContactWithOrganizationTest@51081592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreateContactWithOrganizationTest.launchBrowser()'><b>launchBrowser</b><br>Test class: com.crm.practice.PracticeCreateContactWithOrganizationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace28597262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace28597262'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreateContactWithOrganizationTest@735b5592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreatingNewOrganizationTest.launchBrowser()'><b>launchBrowser</b><br>Test class: com.crm.practice.PracticeCreatingNewOrganizationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1581078471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1581078471'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreatingNewOrganizationTest@58651fd0</td></tr>
+<tr>
+<td title='com.crm.organization.CreateNewOrganizatinTest.launchBrowser()'><b>launchBrowser</b><br>Test class: com.crm.organization.CreateNewOrganizatinTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1063737662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1063737662'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.organization.CreateNewOrganizatinTest@62ee68d8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.crm.contacts.CreateContactWithOrganizationTest.loginToApplication()'><b>loginToApplication</b><br>Test class: com.crm.contacts.CreateContactWithOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.contacts.CreateContactWithOrganizationTest@51081592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreateContactWithOrganizationTest.loginToApplication()'><b>loginToApplication</b><br>Test class: com.crm.practice.PracticeCreateContactWithOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreateContactWithOrganizationTest@735b5592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreatingNewOrganizationTest.loginToApplication()'><b>loginToApplication</b><br>Test class: com.crm.practice.PracticeCreatingNewOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreatingNewOrganizationTest@58651fd0</td></tr>
+<tr>
+<td title='com.crm.organization.CreateNewOrganizatinTest.loginToApplication()'><b>loginToApplication</b><br>Test class: com.crm.organization.CreateNewOrganizatinTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.organization.CreateNewOrganizatinTest@62ee68d8</td></tr>
+<tr>
+<td title='com.crm.contacts.CreateContactWithOrganizationTest.logoutFromApplication()'><b>logoutFromApplication</b><br>Test class: com.crm.contacts.CreateContactWithOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.contacts.CreateContactWithOrganizationTest@51081592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreateContactWithOrganizationTest.logoutFromApplication()'><b>logoutFromApplication</b><br>Test class: com.crm.practice.PracticeCreateContactWithOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreateContactWithOrganizationTest@735b5592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreatingNewOrganizationTest.logoutFromApplication()'><b>logoutFromApplication</b><br>Test class: com.crm.practice.PracticeCreatingNewOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreatingNewOrganizationTest@58651fd0</td></tr>
+<tr>
+<td title='com.crm.organization.CreateNewOrganizatinTest.logoutFromApplication()'><b>logoutFromApplication</b><br>Test class: com.crm.organization.CreateNewOrganizatinTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.organization.CreateNewOrganizatinTest@62ee68d8</td></tr>
+<tr>
+<td title='com.crm.contacts.CreateContactWithOrganizationTest.closeBrowser()'><b>closeBrowser</b><br>Test class: com.crm.contacts.CreateContactWithOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.contacts.CreateContactWithOrganizationTest@51081592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreateContactWithOrganizationTest.closeBrowser()'><b>closeBrowser</b><br>Test class: com.crm.practice.PracticeCreateContactWithOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreateContactWithOrganizationTest@735b5592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreatingNewOrganizationTest.closeBrowser()'><b>closeBrowser</b><br>Test class: com.crm.practice.PracticeCreatingNewOrganizationTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreatingNewOrganizationTest@58651fd0</td></tr>
+<tr>
+<td title='com.crm.organization.CreateNewOrganizatinTest.closeBrowser()'><b>closeBrowser</b><br>Test class: com.crm.organization.CreateNewOrganizatinTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.organization.CreateNewOrganizatinTest@62ee68d8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNG3Test.Ctest()'><b>Ctest</b><br>Test class: com.crm.testngpractice.PracticeTestNG3Test<br/>
+<a href="#Output-1957099969" onClick='toggleBox("Output-1957099969", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1957099969" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1957099969">
+from test C <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNG3Test@9629756</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin1, password1<br/>
+<a href="#Output-1312963234" onClick='toggleBox("Output-1312963234", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1312963234" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1312963234">
+admin1====password1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin2, password2<br/>
+<a href="#Output-826865256" onClick='toggleBox("Output-826865256", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-826865256" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-826865256">
+admin2====password2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin3, password3<br/>
+<a href="#Output-1845517769" onClick='toggleBox("Output-1845517769", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1845517769" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1845517769">
+admin3====password3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin4, password4<br/>
+<a href="#Output-2095788421" onClick='toggleBox("Output-2095788421", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2095788421" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2095788421">
+admin4====password4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin5, password5<br/>
+<a href="#Output-1131184547" onClick='toggleBox("Output-1131184547", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1131184547" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1131184547">
+admin5====password5<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin6, password6<br/>
+<a href="#Output-895599632" onClick='toggleBox("Output-895599632", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-895599632" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-895599632">
+admin6====password6<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin7, password7<br/>
+<a href="#Output-1508059488" onClick='toggleBox("Output-1508059488", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1508059488" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1508059488">
+admin7====password7<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin8, password8<br/>
+<a href="#Output-2082557120" onClick='toggleBox("Output-2082557120", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2082557120" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2082557120">
+admin8====password8<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin9, password9<br/>
+<a href="#Output-1533524862" onClick='toggleBox("Output-1533524862", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1533524862" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1533524862">
+admin9====password9<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin10, password10<br/>
+<a href="#Output-1620948294" onClick='toggleBox("Output-1620948294", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1620948294" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1620948294">
+admin10====password10<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin11, password11<br/>
+<a href="#Output-552937500" onClick='toggleBox("Output-552937500", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-552937500" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-552937500">
+admin11====password11<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin12, password12<br/>
+<a href="#Output-1455695758" onClick='toggleBox("Output-1455695758", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1455695758" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1455695758">
+admin12====password12<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin13, password13<br/>
+<a href="#Output-807328355" onClick='toggleBox("Output-807328355", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-807328355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-807328355">
+admin13====password13<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin14, password14<br/>
+<a href="#Output-1025797795" onClick='toggleBox("Output-1025797795", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1025797795" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1025797795">
+admin14====password14<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin15, password15<br/>
+<a href="#Output-873993427" onClick='toggleBox("Output-873993427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-873993427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-873993427">
+admin15====password15<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin16, password16<br/>
+<a href="#Output-94157402" onClick='toggleBox("Output-94157402", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-94157402" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-94157402">
+admin16====password16<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin17, password17<br/>
+<a href="#Output-466853180" onClick='toggleBox("Output-466853180", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-466853180" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-466853180">
+admin17====password17<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin18, password18<br/>
+<a href="#Output-1863953433" onClick='toggleBox("Output-1863953433", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1863953433" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1863953433">
+admin18====password18<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin19, password19<br/>
+<a href="#Output-295485334" onClick='toggleBox("Output-295485334", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-295485334" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-295485334">
+admin19====password19<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest.dataProviderTest()'><b>dataProviderTest</b><br>Test class: com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest<br>Parameters: admin20, password20<br/>
+<a href="#Output-1899141525" onClick='toggleBox("Output-1899141525", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1899141525" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1899141525">
+admin20====password20<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeDataProviderTestNgReadingMultipleDataExcelSimultaneouslyTest@4520ebad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNG1Test.method1()'><b>method1</b><br>Test class: com.crm.testngpractice.PracticeTestNG1Test<br/>
+<a href="#Output-71016405" onClick='toggleBox("Output-71016405", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-71016405" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-71016405">
+print Method 1 <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNG1Test@5419f379</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNG2Test.test()'><b>test</b><br>Test class: com.crm.testngpractice.PracticeTestNG2Test<br/>
+<a href="#Output-937744315" onClick='toggleBox("Output-937744315", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-937744315" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-937744315">
+from test <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNG2Test@7f9a81e8</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterEnableTest.test1()'><b>test1</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterEnableTest<br/>
+<a href="#Output-1168340825" onClick='toggleBox("Output-1168340825", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1168340825" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1168340825">
+test1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterEnableTest@7dc7cbad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterPriorityTest.test1()'><b>test1</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterPriorityTest<br/>
+<a href="#Output-1932536213" onClick='toggleBox("Output-1932536213", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1932536213" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1932536213">
+test1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterPriorityTest@d2cc05a</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test1()'><b>test1</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-252738640" onClick='toggleBox("Output-252738640", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-252738640" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-252738640">
+test1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterPriorityTest.test2()'><b>test2</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterPriorityTest<br/>
+<a href="#Output-406375608" onClick='toggleBox("Output-406375608", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-406375608" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-406375608">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterPriorityTest@d2cc05a</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test2()'><b>test2</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-1360215046" onClick='toggleBox("Output-1360215046", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1360215046" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1360215046">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test2()'><b>test2</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-1260467793" onClick='toggleBox("Output-1260467793", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1260467793" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1260467793">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test2()'><b>test2</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-1111613684" onClick='toggleBox("Output-1111613684", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1111613684" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1111613684">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test2()'><b>test2</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-1321203216" onClick='toggleBox("Output-1321203216", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1321203216" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1321203216">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterEnableTest.test3()'><b>test3</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterEnableTest<br/>
+<a href="#Output-1667305539" onClick='toggleBox("Output-1667305539", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1667305539" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1667305539">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterEnableTest@7dc7cbad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test3()'><b>test3</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-100929741" onClick='toggleBox("Output-100929741", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-100929741" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-100929741">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterPriorityTest.test3()'><b>test3</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterPriorityTest<br/>
+<a href="#Output-157168588" onClick='toggleBox("Output-157168588", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-157168588" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-157168588">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterPriorityTest@d2cc05a</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterEnableTest.test4()'><b>test4</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterEnableTest<br/>
+<a href="#Output-550147359" onClick='toggleBox("Output-550147359", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-550147359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-550147359">
+test4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterEnableTest@7dc7cbad</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParameterPriorityTest.test4()'><b>test4</b><br>Test class: com.crm.testngpractice.PracticeTestNGParameterPriorityTest<br/>
+<a href="#Output-1815007437" onClick='toggleBox("Output-1815007437", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1815007437" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1815007437">
+test4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParameterPriorityTest@d2cc05a</td></tr>
+<tr>
+<td title='com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest.test4()'><b>test4</b><br>Test class: com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest<br/>
+<a href="#Output-1154821602" onClick='toggleBox("Output-1154821602", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1154821602" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1154821602">
+test4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.crm.testngpractice.PracticeTestNGParametersInvocationCountTest@4f933fd1</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.crm.contacts.CreateContactWithOrganizationTest.createContactWithOrganizationTest()'><b>createContactWithOrganizationTest</b><br>Test class: com.crm.contacts.CreateContactWithOrganizationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1719072416", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1719072416'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.contacts.CreateContactWithOrganizationTest@51081592</td></tr>
+<tr>
+<td title='com.crm.organization.CreateNewOrganizatinTest.createNewOrganizatinTest()'><b>createNewOrganizatinTest</b><br>Test class: com.crm.organization.CreateNewOrganizatinTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace348055829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace348055829'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.organization.CreateNewOrganizatinTest@62ee68d8</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreateContactWithOrganizationTest.practiceCreateContactWithOrganizationTest()'><b>practiceCreateContactWithOrganizationTest</b><br>Test class: com.crm.practice.PracticeCreateContactWithOrganizationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1940445711", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940445711'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreateContactWithOrganizationTest@735b5592</td></tr>
+<tr>
+<td title='com.crm.practice.PracticeCreatingNewOrganizationTest.practicecreateNewOrganizatinTest()'><b>practicecreateNewOrganizatinTest</b><br>Test class: com.crm.practice.PracticeCreatingNewOrganizationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1860491691", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1860491691'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method launchBrowser but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.practice.PracticeCreatingNewOrganizationTest@58651fd0</td></tr>
+</table><p>
+</body>
+</html>
