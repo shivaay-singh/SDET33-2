@@ -22,7 +22,7 @@ public class CreateContactTest {
 
 	public static void main(String[] args) throws Throwable {
 		//Step :1 Fetch data from external file(commonData  from Properties file) and store it in variable
-
+// practice github
 		FileUtility.initializePropertyFile(ConstantPath.propertyVtigerFilePath);
 		FileUtility.fetchDataFromProperty("url");
 
