@@ -5,6 +5,12 @@
     <classes>
       <class name="com.crm.testngpractice.PracticeTestNG1Test"/>
       <class name="com.crm.testngpractice.PracticeTestNG3Test"/>
+      
+      
+      
+      
+      
+      
       <class name="com.crm.testngpractice.PracticeTestNG2Test"/>
     </classes>
   </test> <!-- Test -->
